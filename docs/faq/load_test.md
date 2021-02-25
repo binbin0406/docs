@@ -98,3 +98,10 @@ systemctl restart docker
 msctl start
 ```
 若检查发现网络连接状态正常，在执行性能测试时仍旧提示该错误，请联系我们的团队进行进一步定位。
+
+## MeterSphere 压测运行不起来，报这个错误（或一直处于starting）
+
+2021-01-27 17:30:28,272 [qtp359742806-37] WARN o.s.w.s.m.s.DefaultHandlerExceptionResolver ? - Resolved [org.springframework.web.bind.ServletRequestBindingException: Failed to find lookupPath '//jmeter/download' within requestUri '/jmeter/download'. This could be because the path has invalid encoded characters or isn't normalized.; nested exception is org.springframework.web.servlet.resource.ResourceUrlEncodingFilter$LookupPathIndexException: Failed to find lookupPath '//jmeter/download' within requestUri '/jmeter/download'. This could be because the path has invalid encoded characters or isn't normalized.]
+
+### 在当前站点这里配置访问的域名，URL后不要/
+
